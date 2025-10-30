@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 14</title>
+</head>
+<body>
+    <div class="container">
+        <div id="nascimento" class="logo">
+        <h1>Calculadora de Idade</h1>
+        </div>
+    </div>
+    <div>
+        <span>Data de Nascimento</span>
+    <input class="dia" id="dia" type="number" max="31">
+    <select class="mes" name="mes" id="mes">
+        <option value="01">Janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select>
+    <input class="ano" id="ano" type="number">
+    </div>        
+
+    <br>
+
+    <button class="button" onclick="calcularidade ()">Calcular a idade</button>
+    
+</body>
+    <script>
+        function calculaidade(){
+            var dia = document.getElementById ("dia").value;
+            var mes = document.getElementById ("mes").value;
+        }
+    </script>
+</html>
