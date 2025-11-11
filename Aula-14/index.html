@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula 14</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="calculadora.js"></script>
 </head>
 <body>
+<main>
+<div class='main-section'>
     <div class="container">
         <div id="nascimento" class="logo">
         <h1>Calculadora de Idade</h1>
@@ -35,39 +39,7 @@
     <br>
 
     <button class="button" onclick="calcularidade()">Calcular a idade</button>
-    
+</div>
+</main>
 </body>
-    <script>
-        function calcularidade(){
-            var dia = document.getElementById("dia").value;
-            var mes = document.getElementById("mes").value;
-            var ano = document.getElementById("ano").value;
-
-            var data = new Date();
-            var diaatual = data.getUTCDate();
-            var mesatual = data.getUTCMonth() +1;
-            var anoatual = data.getFullYear()
-
-            var final = 0;
-
-            if(mesatual-mes<0){
-                final = anoatual - ano - 1;
-            }
-
-            else if (mesatual==mes){
-                if(diaatual - dia < 0){
-                    final = (anoatual - ano) - 1;
-                }
-                else{
-                    final = anoatual - ano;
-                }
-            }
-
-            else {
-                final = anoatual - ano;
-            }
-
-            window.alert(final);
-        }
-    </script>
 </html>
