@@ -1,31 +1,28 @@
-function calcularidade(){
-    var dia = document.getElementById("dia").value;
-    var mes = document.getElementById("mes").value;
-    var ano = document.getElementById("ano").value;
-
-    var data = new Date();
-    var diaatual = data.getUTCDate();
-    var mesatual = data.getUTCMonth() +1;
-    var anoatual = data.getFullYear()
-
-    var final = 0;
-
-    if(mesatual-mes<0){
-        final = anoatual - ano - 1;
-    }
-
-    else if (mesatual==mes){
-        if(diaatual - dia < 0){
-            final = (anoatual - ano) - 1;
+    function Calcular() {
+        let valor1 = Number (document.getElementById("n1").value)
+        let valor2 = Number (document.getElementById("n2").value)
+        let operador = (document.getElementById("op").value)
+        let resuldadocalc = 0
+        switch(operador) {
+            case '+': resultadocalc = valor1 + valor2; 
+            break;
+            case '-': resultadocalc = valor1 - valor2; 
+            break;
+            case '*': resultadocalc = valor1 * valor2; 
+            break;
+            case '/': resultadocalc = valor1 / valor2; 
+            break;
+            default: alert('operador não identificado!');
         }
-        else{
-            final = anoatual - ano;
-        }
+
+        let result = document.getElementById("resultadocalc")
+
+        result.style.color = randon_rgba();
+        result.innerHTML = resuldadocalc
     }
 
-    else {
-        final = anoatual - ano;
+    function fundo_light() {
+        document.body.style.backgroundColor = "white"
+        document.body.style.color = "black"
+        document.getElementById("container").className = ".main-section-dark"
     }
-
-    window.alert(final);
-}
